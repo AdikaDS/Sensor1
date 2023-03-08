@@ -8,6 +8,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -21,11 +22,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     private TextView mTextSensorLight;
     private TextView mTextSensorProximity;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        scrollView = findViewById(R.id.scroll_view);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         // Untuk menampung sensor apa aja yg ada di device
 
@@ -90,6 +93,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         switch (sensorType) {
             case Sensor.TYPE_LIGHT:
                 mTextSensorLight.setText(String.format("Light sensor : %1$.2f", currentValue));
+                // Logic sendiri
+//                if (currentValue >= 10000) {
+//                    scrollView.setBackgroundColor(getResources().getColor(R.color.black));
+//                } else {
+//                    scrollView.setBackgroundColor(getResources().getColor(R.color.teal_700));
+//                }
                 break;
             case Sensor.TYPE_PROXIMITY:
                 mTextSensorProximity.setText(String.format("Proximity sensor : %1$.2f", currentValue));
