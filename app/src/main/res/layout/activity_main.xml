@@ -21,25 +21,70 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:text="Pengukur Sensor"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:id="@+id/label_light"
                 android:text="Light sensor : %1$.2f"/>
 
             <TextView
+                android:id="@+id/label_gravity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/label_gravity"
-                android:text="Proximity sensor : %1$.2f"/>
+                android:text="Proximity sensor : %1$.2f" />
+
+            <TextView
+                android:id="@+id/label_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature sensor : %1$.2f" />
+
+            <TextView
+                android:id="@+id/label_magnetic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Magnetic sensor : %1$.2f" />
+
+            <TextView
+                android:id="@+id/label_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pressure sensor : %1$.2f" />
+
+            <TextView
+                android:id="@+id/label_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Relative Humidity sensor : %1$.2f" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:text="Jenis Sensor"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:id="@+id/sensor_list"
-                android:text="placeholder"/>
+                android:text="Sensor-Sensor"/>
         </LinearLayout>
 
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
